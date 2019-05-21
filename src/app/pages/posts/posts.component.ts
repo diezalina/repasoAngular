@@ -8,28 +8,16 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class PostsComponent implements OnInit {
 
-
-posts = [
-  {
-    title: 'Title1',
-    body: 'Lorem ipsum dolor sit amet'
-  },
-  {
-    title: 'Thing',
-    body: 'text'
-  },
-  {
-    title: 'yo dude',
-    body: 'post 3'
-  }
-];
+postsRemote: any;
 
   constructor(private dataServ: DataService) { }
 
   ngOnInit() {
-    this.dataServ.getPosts().subscribe(posts => {
-      console.log(posts);
-    });
+    this.postsRemote = this.dataServ.getPosts();
+  }
+
+  onClickParent(id) {
+    console.log(id);
   }
 
 }
