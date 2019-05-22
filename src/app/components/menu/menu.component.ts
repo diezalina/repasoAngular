@@ -23,6 +23,10 @@ rutas = [
   {
     path: '/posts',
     nombre: 'Posts'
+  },
+  {
+    path: '/photos',
+    nombre: 'Photos'
   }
 ];
   constructor() { }

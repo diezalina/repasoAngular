@@ -1,0 +1,9 @@
+<div class="container">
+ <div class="row">
+   <div class="col-lg-4" *ngFor="let photo of remotePhotos | async">
+      <h4>{{photo.title}}</h4>
+      <img class="rounded mx-auto d-block" src="{{photo.thumbnailUrl}}">
+      <button type="button" class="btn-lg btn-block btn-outline-info">About this image</button>
+    </div>
+  </div>
+ </div>
